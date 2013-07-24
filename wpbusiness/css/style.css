@@ -9,6 +9,9 @@ body {
 a {
 	text-decoration: none;
 }
+.nodisplay {
+	display: none;
+}
 .wrap {
 	width: 960px;
 	margin: 0 auto;
@@ -143,14 +146,16 @@ header nav ul li a:hover {
 .slider .container {
 	position: relative;
 	float: right;
-	width: 545px;
+	width: 565px;
 	height: 349px;
+	overflow: hidden;
 }
-.slider .container div {
+.slider .container li {
 	display: none;
 	position: absolute;
 	bottom: 0;
 	right: 21px;	
+	transition: height .3s, width .3s, top .3s, left .3s, right .3s, bottom .3s;
 }
 .slider .container .one {
 	height: 332px;
@@ -160,14 +165,18 @@ header nav ul li a:hover {
 	right: 21px;	
 	z-index: 30;
 }
-.slider .container div:before,
-.slider .container div:after {
+.slider .container .one img {
+	height: 332px;
+	width: 299px;
+}
+.slider .container li:before,
+.slider .container li:after {
 	content: "";
 	position: absolute;			
 	z-index: -1;
 }
 /* Тень у картинок */
-.slider .container div:after {	
+.slider .container li:after {	
 	left: 0; right: 0;
 	bottom: 0; 
 	height: 65%;
@@ -175,6 +184,11 @@ header nav ul li a:hover {
   -moz-box-shadow: 0 0 60px rgba(0, 0, 0, 1);
   box-shadow: 0 0 60px rgba(0, 0, 0, 1); 
 }
+.slider .container li.two:after {
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1); 	
+}	
 /* Чтобы тень не выступала поверх границ */
 .slider .body:after {
 	content: "";	
