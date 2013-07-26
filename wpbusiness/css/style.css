@@ -89,7 +89,7 @@ header nav ul li a:hover {
 	position: relative;
 	border: 20px solid white;
 	height: 349px;
-	background: white url(../img/slider-body-bg.png) repeat;
+	background: #3B70D9 url(../img/slider-body-bg.png) repeat;
 }
 .slider .body .pagination {
 	height: 35px;
@@ -453,6 +453,7 @@ header nav ul li a:hover {
 }
  .contact .left form input[type=submit] {
 	width: auto;
+	cursor: pointer;
 	padding: 0 8px;
 	height: 27px;
 	color: black;
