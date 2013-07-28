@@ -1,5 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<!--[if lt IE 7 ]><html lang="ru" class="ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="ru" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ru" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ru" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="ru"><![endif]-->
+<!--[if !IE]>--><html lang="ru"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<title>Page</title>
@@ -10,7 +15,76 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	
+	<header>
+		<div class="wrap">
+			<a href="#">
+				<img class="logo" src="img/logo.png" alt="Кинорулетка" width="160" height="94">
+			</a>
+			<ul class="social">
+				<li><a href="vk.com" title="В контакте"></a></li>
+				<li><a href="twitter.com" title="facebook"></a></li>
+				<li><a href="facebook.com" title="twitter"></a></li>
+			</ul>
+		</div> <!-- </wrap> -->
+	</header>
+
+	<div class="ruletka">
+		<a href="#"><img src="img/ruletka.png" alt="Рулетка" width="76" height="61"></a>
+		<p><mark><a href="#">Крутить рулетку</a>,</mark>
+		 чтобы перейти к следующему фильму</p>
+	</div> <!-- </ruletka> -->
+	
 	<div class="wrap">
+
+		<div class="description">
+			
+			<article class="description-box">
+				<img class="poster" src="img/poster.jpg" alt="Апполон 18" width="190" height="270">
+				<header>
+					<hgroup>
+						<h1>Аполлон 18</h1><!-- слеши оформлены псевдоэлементами как часть стиля -->
+						<h2>Apollo 18</h2>
+					</hgroup>
+					<blockquote>Никто не звал нас на Луну</blockquote>
+					<p class="score">
+						<img class="imdb" src="img/imdb.png" alt="IMDb" width="48" height="19"> 6.0
+						<img class="kinopoisk" src="img/kinopoisk.png" alt="Кинопоиск" width="108" height="20"> 6.1
+					</p>
+				</header>
+				<div class="lines data">
+					<p><mark>Год:</mark> 2011</p>
+					<p><mark>Страна:</mark> США, Канада</p>
+					<p><mark>Режиссер:</mark> Гонсало Лопес-Гальего</p>
+					<p><mark>Жанр:</mark> Ужасы, фантастика, триллер</p>
+					<p><mark>Ужасы:</mark> 89 мин.</p>
+				</div>
+				<h2>Роли исполняли</h2>
+				<div class="lines">
+					<p><mark>Benjamin Anderson:</mark> Уоррен Кристи // Warren Christie</p>
+					<p><mark>Nathan Walker:</mark> Ллойд Оуэн // Lloyd Owen</p>
+					<p><mark>В титрах не указан:</mark> Райан Роббинс // Ryan Robbins</p>
+					<p><mark>Benjamin Anderson:</mark> Уоррен Кристи // Warren Christie</p>
+					<p><mark>Nathan Walker:</mark> Ллойд Оуэн // Lloyd Owen</p>
+				</div> <!-- </lines> -->
+			</article> <!-- </description> -->
+
+			<article class="description-box spoiler">
+				<h1>Спойлер</h1>
+				<p>По официальным данным «Аполлон 17» был последней лунной экспедицией с участием людей. Почему уже 35 лет никто не летает на Луну? Ходили слухи, что была еще одна миссия и с ней что-то случилось, но вся информация об этом была засекречена. Не было никаких доказательств, пока не появились эти сенсационные материалы.</p>
+				<p>По официальным данным «Аполлон 17» был последней лунной экспедицией с участием людей. Почему уже 35 лет никто не летает на Луну? Ходили слухи, что была еще одна миссия и с ней что-то случилось, но вся информация об этом была 	засекречена. Не было никаких доказательств, пока не появились эти сенсационные материалы.</p>
+				<p>По официальным данным «Аполлон 17» был последней лунной экспедицией с участием людей. Почему уже 35 лет никто не летает на Луну? Ходили слухи, что была еще одна миссия и с ней что-то случилось, но вся информация об этом была засекречена. Не было никаких доказательств, пока не появились эти сенсационные материалы.</p>
+				<div class="buttons">
+					<a href="#" class="button torrent"><span></span>Скачать торрент</a>
+					<a href="#" class="button file"><span></span>Файлообменник</a>
+					<a href="#" class="button partner"><span></span>Кинопартнерка</a>
+				</div>
+				<div class="right likes">
+					<img src="img/likes.png" alt="likes">
+				</div>
+			</article>
+
+		</div> <!-- </descriprion> -->
 	</div> <!-- </wrap> -->
 	<!-- scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>

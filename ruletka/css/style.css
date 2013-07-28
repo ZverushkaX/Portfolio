@@ -1,3 +1,358 @@
+@font-face {
+	font-family: "Century Gothic";
+	src: url(../fonts/CG.ttf);
+}
+@font-face {
+	font-family: "Georgia";
+	src: url(../fonts/AAIB.ttf);
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.wrap {
+	width: 1054px;
+	margin: 0 auto;
+}
+.overlow {
+	overflow: hidden;
+}
 body {
-	font-family: Arial, "Heletica CY", "Nimbus Sans L", sans-serif;
+	font-family: "Century Gothic", Arial, "Heletica CY", "Nimbus Sans L", sans-serif;
+	color: #999;	
+	font-size: 13px;
+	line-height: 20px;
+	min-width: 1094px;
+	background: url(../img/bg.png);	
+}
+body:before {
+	content: "";
+	position: absolute;
+	/*background: -webkit-radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));
+	background: -moz-radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));
+	background: -o-radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));
+	background: -ms-radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));
+	background: radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));*/
+	background: url(../img/bg-highlight.png) center top no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	outline: 1px solid red;
+	top: 0;	
+	width: 100%;
+	height: 994px;
+	opacity: .28;
+	z-index: -1;
+}
+
+/**
+* Header
+*
+* 
+*/
+body > header {	
+	height: 128px;
+	position: relative;
+	z-index: 3; /* on top */
+}
+body > header:before {
+	position: absolute;
+	z-index: -1; /* Задний фон сзади */
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: url(../img/header-bg.png) repeat-x 1px 0;
+}
+body > header:after {
+	z-index: -2; /* тень позади всего */
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 15px;
+	left: 0;
+	bottom: -5px;
+	background-image: -webkit-linear-gradient(to top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .4));
+	background-image: 	 -moz-linear-gradient(to top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .4));
+	background-image: 	   -o-linear-gradient(to top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .4));
+	background-image: 	  -ms-linear-gradient(to top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .4));
+	background-image: 	      linear-gradient(to top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .4));
+}
+body > header .logo {
+	margin: 13px 0 0 1px;
+	float: left;
+}
+body > header .social { /* Ссылки вконтакте */
+	float: right;
+	margin: 10px 8px 0 0;
+	overflow: hidden;
+}
+body > header .social li {
+	float: left;
+	margin-left: 18px;
+	width: 21px;
+	height: 20px;	
+}
+body > header .social li:first-child {
+	margin-left: 0;
+}
+body > header .social li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url(../img/social.png) no-repeat;
+}
+body > header .social li a[href*="facebook"] {
+	background-position: 0 -20px;
+}
+body > header .social li a[href*="twitter"] {
+	background-position: 0 -40px;
+}
+body > header > .wrap {
+}
+
+/**
+* Рулетка
+*
+* 
+*/
+.ruletka {
+	overflow: hidden;
+	position: relative;
+	background: hsla(0, 0%, 0%, .15);
+	width: 400px;
+	height: 86px;
+	z-index: 2;
+	margin: -8px auto 0;
+	border: 1px solid hsla(0, 0%, 80%, .15);
+	border-top: none;
+	-webkit-border-radius: 	0 0 10px 10px;
+	-moz-border-radius: 	0 0 10px 10px;
+	border-radius: 			0 0 10px 10px;
+	-webkit-box-shadow: 	0 0 1px hsla(0, 0%, 20%, .15);
+	-moz-box-shadow: 		0 0 1px hsla(0, 0%, 20%, .15);
+	box-shadow: 			0 0 1px hsla(0, 0%, 20%, .15);
+	line-height: 21px;
+	font-size: 11px;
+	color: white;
+}
+.ruletka img {
+	margin: 14px 10px 0 50px;
+	float: left;
+	cursor: pointer;
+}
+.ruletka p {
+	margin: 25px 0 0 0;
+}
+.ruletka mark {
+	display: block;
+	color: white;
+	background: none;
+	font-size: 16px;
+	letter-spacing: 3px;
+	margin-bottom: -6px;
+}
+
+/**
+* Блоки с описанием фильма
+*
+* 
+*/
+.description {
+	margin-top: 18px;
+}
+.description:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;	
+}
+.description-box {
+	overflow: auto;
+	float: right;
+	width: 480px;
+	height: 496px;
+	padding: 7px 20px;
+	color: #999;
+	background: hsla(0, 0%, 0%, .15);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 1px hsla(0, 0%, 100%, .1);
+	-moz-box-shadow: 	0 0 1px hsla(0, 0%, 100%, .1);
+	box-shadow: 		0 0 1px hsla(0, 0%, 100%, .1);
+	border-top: 1px solid hsla(0, 0%, 15%, .3);
+}
+.description-box:first-child {
+	float: left;
+}
+.description-box .poster {
+	float: left;
+	-moz-box-shadow: 	0 1px 5px hsla(0, 0%, 0%, .74);
+	-webkit-box-shadow: 0 1px 5px hsla(0, 0%, 0%, .74);
+	box-shadow: 		0 1px 5px hsla(0, 0%, 0%, .74);
+	margin-right: 15px;
+}
+.description-box hgroup {
+	overflow: hidden;
+}
+.description-box hgroup h1 {
+	color: white;
+	font-size: 16px;
+	float: left;
+	line-height: 21px;
+}
+.description-box hgroup h2 {
+	font-size: 12px;
+	line-height: 21px;
+	color: #727272;
+}
+.description-box hgroup h2:before {
+	content: "// ";
+	display: inline;
+	margin-left: 4px;
+}
+.description-box blockquote {
+	quotes: '«' '»';
+	font-size: 12px;
+	color: #727272;
+	margin-top: -3px;
+}
+.description-box blockquote:before {
+	content: open-quote;
+}
+.description-box blockquote:after {
+	content: close-quote;
+}
+.description-box header .score {	
+	margin-top: 11px;
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 20px;
+	color: white;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.description-box header .score img {
+	vertical-align: top;
+	margin-right: 16px;
+}
+.description-box header .score .kinopoisk {
+	margin-left: 32px;
+	margin-right: 13px;
+}
+.description-box .lines {
+	margin-top: 31px;
+}
+.description-box h2 + .lines {
+	margin-top: 9px;
+}
+.description-box .lines p {
+	height: 31px;
+	line-height: 31px;
+	font-family: Georgia;
+	border-bottom: 2px groove hsla(0, 20%, 10%, .15);
+	font-size: 13px;
+	font-style: italic;
+	color: #666;
+	text-shadow: 1px 1px 1px hsla(0, 0%, 0%, .6);
+}
+.description-box .data {
+	margin-left: 208px;	
+}
+.description-box > h2 {
+	clear: both;
+	font-size: 15px;
+	color: white;
+	margin-top: 26px;
+	line-height: 1;
+}
+.description-box .lines mark {
+	background: none;
+	color: #999;
+	font-size: 14px;
+	font-style: normal;
+	font-family: "Century Gothic";
+}
+.description-box.spoiler {
+	text-align: justify;
+	padding-left: 15px;
+	width: 485px;
+}
+/**
+* Блок с описанием фильма "Спойлер"
+*
+* 
+*/
+.spoiler p {
+	text-indent: 31px;
+	margin-top: 20px;
+}
+.spoiler h1 {
+	margin-top: 5px;
+	font-size: 15px;
+	color: white;	
+	padding-left: 46px;
+	line-height: 28px;
+	background: url(../img/h1-spoiler.png) no-repeat;
+}
+.spoiler h1 + p {
+	margin-top: 14px;
+}
+.buttons {
+	margin-top: 20px;
+}
+.button {
+	text-indent: 0;
+	margin: 0 0 0 15px;
+	display: inline-block;
+	padding: 0 10px 0 12px;
+	min-width: 125px;
+	min-height: 30px;
+	font-size: 12px;
+	color: #85592e;
+	border-radius: 15px;
+	text-align: center;
+	line-height: 30px;
+	background: #fec151;
+	background-image: 	-webkit-linear-gradient(to top, #feba48, #feda71);
+	background-image: 	   -moz-linear-gradient(to top, #feba48, #feda71);
+	background-image: 	     -o-linear-gradient(to top, #feba48, #feda71);
+	background-image:	    -ms-linear-gradient(to top, #feba48, #feda71);
+	background-image: 	        linear-gradient(to top, #feba48, #feda71);
+	-moz-box-shadow: 	0 1px 0 #ffe4b3 inset, 1px 1px 3px hsla(0, 0%, 0%, .4);
+	-webkit-box-shadow: 0 1px 0 #ffe4b3 inset, 1px 1px 3px hsla(0, 0%, 0%, .4);
+	box-shadow: 		0 1px 0 #ffe4b3 inset, 1px 1px 3px hsla(0, 0%, 0%, .4);
+	text-shadow: 		0 1px 0 hsla(0, 0%, 100%, .4);
+	font-size: 12px;
+}
+.button:first-child {
+	margin-left: 0;
+}
+.button.torrent span,
+.button.file span,
+.button.partner span {
+	display: inline-block;
+	margin: 0 8px 0 -5px;
+	width: 25px;
+	height: 24px;
+	vertical-align: middle;
+	background: url(../img/button-icons.png) no-repeat;	
+}
+.button.file span {
+	background-position: 0 -24px;
+	margin-right: 0;
+}
+.button.partner span {
+	background-position: 0 - 48px;
+}
+.likes {
+	margin-top: 20px;
 }
