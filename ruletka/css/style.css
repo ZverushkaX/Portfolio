@@ -6,6 +6,13 @@
 	font-family: "Georgia";
 	src: url(../fonts/AAIB.ttf);
 }
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	min-height: 100%;
+}
 a {
 	color: white;
 	text-decoration: none;
@@ -20,8 +27,11 @@ a {
 	width: 1054px;
 	margin: 0 auto;
 }
-.overlow {
+.overflow {
 	overflow: hidden;
+}
+.block {
+	display: block;
 }
 body {
 	font-family: "Century Gothic", Arial, "Heletica CY", "Nimbus Sans L", sans-serif;
@@ -40,7 +50,7 @@ body:before {
 	background: -ms-radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));
 	background: radial-gradient(center top, ellipse cover, white 0%, hsla(0, 0%, 100%, 1) 15%, hsla(0, 0%, 70%, 1) 40%, hsla(0, 0%, 60%, .6) 60%, rgba(0, 0, 0, 0));*/
 	background: url(../img/bg-highlight1.png) center top no-repeat;
-	background-size: 100%;
+	background-size: 100% 100%;
 	top: 0;	
 	width: 100%;
 	height: 994px;
@@ -153,6 +163,8 @@ body > header > .wrap {
 	margin: 14px 10px 0 50px;
 	float: left;
 	cursor: pointer;
+}
+.ruletka img:hover {
 }
 .ruletka p {
 	margin: 25px 0 0 0;
@@ -418,9 +430,9 @@ body > header > .wrap {
 	border-radius: 			0 10px 10px;
 	padding: 20px;
 	height: 305px;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
-
 /* Кадры из фильма */
 .frames h1 {
 	background: url(../img/h1-frame.png) 28px 5px no-repeat;
@@ -430,6 +442,7 @@ body > header > .wrap {
 	padding: 9px 0 10px 25px;	
 	height: 131px !important;
 	position: relative;
+	overflow: hidden !important;
 }
 .frames ul li {	
 	float: left;
@@ -474,4 +487,61 @@ body > header > .wrap {
 }
 .comments h1 {
 	background: url(../img/h1-vkontakte.png) 28px 5px no-repeat;
+}
+footer {
+	width: 100%;
+	height: 32px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 500;
+	padding-top: 70px;
+	padding-bottom: 18px;
+}
+footer .wrap {
+	position: relative;
+}
+footer a {
+	color: #f1e358;
+	font-size: 16px;
+	line-height: 1;
+}
+footer .line:before,
+footer .line:after {
+	margin-left: 38px;
+	margin-right: 13px;
+	margin-bottom: 3px;
+ 	width: 55px;
+	content: "";
+	display: inline-block;
+	*display: inline;
+	*zoom: block;
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #373737;
+}
+footer .line:after {	
+	margin-left: 13px;
+	margin-right: 36px;	
+	width: 800px;
+}
+footer .copyright {
+	text-align: center;
+	font-size: 12px;
+	color: #d7d1d1;
+	font-family: arial;
+	line-height: 1;
+}
+.nav-top {
+	padding: 4px 5px;
+	display: block;
+	position: absolute;
+	width: 16px;
+	height: 22px;	
+	right: 44px;
+	top: -15px;
+}
+.content {
+	min-height: 100%;
+	padding-bottom: 120px !important;
+	overflow: hidden;
 }

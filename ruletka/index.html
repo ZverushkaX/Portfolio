@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
+	<a name="top"></a>
 	<header>
 		<div class="wrap">
 			<a href="#">
@@ -36,7 +36,7 @@
 		 чтобы перейти к следующему фильму</p>
 	</div> <!-- </ruletka> -->
 	
-	<div class="wrap">
+	<div class="content wrap">
 
 		<div class="description">
 			
@@ -101,24 +101,37 @@
 			<div class="arrow-left"></div>
 			<div class="arrow-right"></div>
 		</div> <!-- </frames> -->
-
-		<div class="box trailer">
-			<header>
-				<h1>Трейлер</h1>
-			</header>
-			<div class="main">
-				<img src="img/video.jpg">
+		<div class="overflow">
+			<div class="box trailer">
+				<header>
+					<h1>Трейлер</h1>
+				</header>
+				<div class="main">
+					<img class="block" src="img/video.jpg">
+				</div>
 			</div>
-		</div>
-		<div class="box comments">
-			<header>
-				<h1>Комментарии</h1>
-			</header>
-			<div class="main">
-				<img src="img/vkontakte.jpg">								
+			<div class="box comments">
+				<header>
+					<h1>Комментарии</h1>
+				</header>
+				<div class="main">
+					<img class="block" src="img/vkontakte.jpg">								
+				</div>
 			</div>
-		</div>		
+		</div> <!-- </overflow> -->
 	</div> <!-- </wrap> -->
+
+	<footer>
+		<div class="wrap">
+			<div class="line">
+				<a href="#">ruletka.ru</a>
+			</div>
+			<p class="copyright">2011 © Все права защищены.</p>
+			<a href="#top" class="nav-top"><img src="img/nav-top.png" alt="наверх"></a>			
+		</div> <!-- </wrap> -->
+	</footer>
+	
+
 	<!-- scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 	<script src="js/script.js" type="text/javascript"></script>
