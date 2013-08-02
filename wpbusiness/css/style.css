@@ -151,11 +151,9 @@ header nav ul li a:hover {
 	overflow: hidden;
 }
 .slider .container li {
-	display: none;
 	position: absolute;
 	bottom: 0;
 	right: 21px;	
-	transition: height .3s, width .3s, top .3s, left .3s, right .3s, bottom .3s;
 }
 .slider .container .one {
 	height: 332px;
@@ -176,18 +174,21 @@ header nav ul li a:hover {
 	z-index: -1;
 }
 /* Тень у картинок */
-.slider .container li:after {	
+.slider .container li.one:after {	
 	left: 0; right: 0;
 	bottom: 0; 
 	height: 65%;
-  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0 0 60px rgba(0, 0, 0, 1);
-  box-shadow: 0 0 60px rgba(0, 0, 0, 1); 
+  	-webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+  	-moz-box-shadow: 	0 0 60px rgba(0, 0, 0, 1);
+  	box-shadow: 		0 0 60px rgba(0, 0, 0, 1); 
 }
 .slider .container li.two:after {
+	left: 0; right: 0;
+	bottom: 0; 
+	height: 65%;
 	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 1); 	
+  	-moz-box-shadow:	0 0 40px rgba(0, 0, 0, 1);
+  	box-shadow: 		0 0 40px rgba(0, 0, 0, 1); 	
 }	
 /* Чтобы тень не выступала поверх границ */
 .slider .body:after {
@@ -208,6 +209,7 @@ header nav ul li a:hover {
 	bottom: 0;
 	right: 260px;
 }
+.slider .container img,
 .slider .container .two img {
 	width: 261px;
 	height: 261px;

@@ -14,9 +14,15 @@
 	<![endif]-->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Виджет комментариев вконтакте -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?98"></script>
+	<script type="text/javascript">
+	  VK.init({apiId: 3798594, onlyWidgets: true});
+	</script>
+	<!-- конец виджета -->
 </head>
 <body>
-	<a name="top"></a>
+	<a id="page-top"></a>
 	<header>
 		<div class="wrap">
 			<a href="#">
@@ -43,10 +49,10 @@
 			<article class="description-box">
 				<img class="poster" src="img/poster.jpg" alt="Апполон 18" width="190" height="270">
 				<header>
-					<hgroup>
+					<div class="hgroup">
 						<h1>Аполлон 18</h1><!-- слеши оформлены псевдоэлементами как часть стиля -->
-						<h2>Apollo 18</h2>
-					</hgroup>
+						<p>Apollo 18</p>
+					</div>
 					<blockquote>Никто не звал нас на Луну</blockquote>
 					<p class="score">
 						<img class="imdb" src="img/imdb.png" alt="IMDb" width="48" height="19"> 6.0
@@ -91,15 +97,32 @@
 			<header>
 				<h1>Кадры из фильма</h1>
 			</header>
-			<ul class="main">
-				<li><img src="img/frame1.jpg"></li>
-				<li><img src="img/frame2.jpg"></li>
-				<li><img src="img/frame3.jpg"></li>
-				<li><img src="img/frame4.jpg"></li>
-				<li><img src="img/frame5.jpg"></li>				
-			</ul>
-			<div class="arrow-left"></div>
-			<div class="arrow-right"></div>
+			<div class="main">
+				<ul id="slider">
+					<li><img src="img/poster.jpg" alt="screenshot"></li>
+					<li><img src="img/slide3.png" alt="screenshot"></li>
+					<li><img src="img/frame3.jpg" alt="screenshot"></li>
+					<li><img src="img/frame4.jpg" alt="screenshot"></li>
+					<li><img src="img/frame5.jpg" alt="screenshot"></li>
+					<li><img src="img/frame1.jpg" alt="screenshot"></li>
+					<li><img src="img/frame2.jpg" alt="screenshot"></li>
+					<li><img src="img/frame3.jpg" alt="screenshot"></li>
+					<li><img src="img/frame4.jpg" alt="screenshot"></li>
+					<li><img src="img/frame5.jpg" alt="screenshot"></li>
+					<li><img src="img/frame1.jpg" alt="screenshot"></li>
+					<li><img src="img/frame2.jpg" alt="screenshot"></li>
+					<li><img src="img/frame3.jpg" alt="screenshot"></li>
+					<li><img src="img/frame4.jpg" alt="screenshot"></li>
+					<li><img src="img/frame5.jpg" alt="screenshot"></li>
+					<li><img src="img/frame1.jpg" alt="screenshot"></li>
+					<li><img src="img/frame2.jpg" alt="screenshot"></li>
+					<li><img src="img/frame3.jpg" alt="screenshot"></li>
+					<li><img src="img/frame4.jpg" alt="screenshot"></li>
+					<li><img src="img/frame5.jpg" alt="screenshot"></li>
+				</ul>
+			</div>
+			<div class="arrow-left" id="slider-left"></div>
+			<div class="arrow-right" id="slider-right"></div>
 		</div> <!-- </frames> -->
 		<div class="overflow">
 			<div class="box trailer">
@@ -107,7 +130,7 @@
 					<h1>Трейлер</h1>
 				</header>
 				<div class="main">
-					<img class="block" src="img/video.jpg">
+					<img class="block" src="img/video.jpg" alt="video">
 				</div>
 			</div>
 			<div class="box comments">
@@ -115,7 +138,10 @@
 					<h1>Комментарии</h1>
 				</header>
 				<div class="main">
-					<img class="block" src="img/vkontakte.jpg">								
+					<div id="vk_comments"></div>
+					<script type="text/javascript">
+					VK.Widgets.Comments("vk_comments", {limit: 5, width: "304", attach: "*"});
+					</script>
 				</div>
 			</div>
 		</div> <!-- </overflow> -->
@@ -127,13 +153,14 @@
 				<a href="#">ruletka.ru</a>
 			</div>
 			<p class="copyright">2011 © Все права защищены.</p>
-			<a href="#top" class="nav-top"><img src="img/nav-top.png" alt="наверх"></a>			
+			<a href="#page-top" class="nav-top"><img src="img/nav-top.png" alt="наверх"></a>			
 		</div> <!-- </wrap> -->
 	</footer>
 	
 
 	<!-- scripts -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-	<script src="js/script.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

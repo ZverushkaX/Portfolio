@@ -1,0 +1,141 @@
+body {
+	font-family: Arial;
+}
+.wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+.slider {
+	min-height: 444px;
+}
+.slider .body {
+	position: relative;
+	border: 20px solid lightgray;
+	height: 349px;
+	background: #3B70D9 url(../img/slider-body-bg.png) repeat;
+}
+.slider .body .pagination {
+	height: 35px;
+	width: 292px;
+	background: url(../img/slider-pagination.png) 0 0 no-repeat;
+	position: absolute;
+	bottom: -7px; 
+	left: 314px;
+	text-align: center;
+	z-index: 100;
+}
+.slider .body .pagination ul {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 14px auto 0 auto;
+	overflow: hidden;
+}
+.slider .body .pagination ul li {
+	background: url(../img/slider-pagination.png) -16px bottom no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: 15px;
+	float: left;
+	cursor: pointer;
+}
+.slider .body .pagination ul li.active {
+	background-position: 0 -35px;
+}
+.slider .body .pagination ul li:first-child {
+	margin-left: 0;
+}
+.slider .text {
+	width: 306px;
+	margin: 85px 0 0 34px;	
+	float: left;
+}
+.slider .text h1 {
+	font-size: 30px;
+	color: white;
+	line-height: 1.2;
+	font-weight: normal;
+}
+.slider .text p {
+	margin-top: 9px;
+	font-size: 12px;
+	line-height: 1.2;
+	color: #dcdcdc;
+}
+.slider .text .button {
+	margin-top: 12px;
+}
+.slider .container {
+	position: relative;
+	float: right;
+	width: 565px;
+	height: 349px;
+	overflow: hidden;
+}
+.slider .container li {	
+	position: absolute;
+	bottom: 0;
+	right: 21px;
+}
+.slider .container img {	
+	width: 261px;
+	height: 261px;
+}
+.slider .container .one {
+	height: 332px;
+	width: 299px;
+	display: block;
+	bottom: 0;
+	right: 21px;	
+	z-index: 30;
+}
+.slider .container .one img {
+	height: 332px;
+	width: 299px;
+}
+.slider .container li:before,
+.slider .container li:after {
+	content: "";
+	position: absolute;			
+	z-index: -1;
+}
+/* Тень у картинок */
+.slider .container li.one:after {	
+	left: 0; right: 0;
+	bottom: 0; 
+	height: 65%;
+  	-webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+  	-moz-box-shadow: 	0 0 60px rgba(0, 0, 0, 1);
+  	box-shadow: 		0 0 60px rgba(0, 0, 0, 1); 
+}
+.slider .container li.two:after {
+	left: 0; right: 0;
+	bottom: 0; 
+	height: 65%;
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  	-moz-box-shadow:	0 0 40px rgba(0, 0, 0, 1);
+  	box-shadow: 		0 0 40px rgba(0, 0, 0, 1); 	
+}	
+/* Чтобы тень не выступала поверх границ */
+.slider .body:after {
+	content: "";	
+	right: -20px;	
+	padding: 0 20px;
+	border-bottom: 20px solid lightgray;
+	position: absolute;
+	bottom: -20px;
+	left: -20px;
+	z-index: 99;	
+}
+.slider .container .two {
+	z-index: 29;
+	display: block;
+	width: 261px;
+	height: 261px;
+	bottom: 0;
+	right: 260px;
+}
+.slider .container .two img {
+	width: 261px;
+	height: 261px;
+}
